@@ -1,0 +1,11 @@
+<h1>~*~*~*Homepage*~*~*~</h1>
+
+<ul>
+  <% @links.each do |link| %>
+  <li><%= link_to link.description, link.url %></li>
+  <% end %>
+</ul>
+<%= link_to "Comment on dis", links_path, :class => 'btn btn-default' %>
+
+
+<p><%= link_to "Add a new link!!", new_link_path, :class => 'btn btn-default' %></p>
